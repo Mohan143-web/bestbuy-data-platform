@@ -2,6 +2,8 @@
 
 Portfolio-grade streaming data platform inspired by how a retailer like Best Buy turns operational events into analytics-ready tables and dashboards.
 
+[Live project site](https://mohan143-web.github.io/bestbuy-data-platform/)
+
 ![Dashboard preview](dashboards/assets/dashboard-preview.svg)
 
 ## Problem Statement

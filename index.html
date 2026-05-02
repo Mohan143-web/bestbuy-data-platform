@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Real-Time E-commerce Data Pipeline</title>
+    <meta
+      name="description"
+      content="Kafka, Spark Structured Streaming, Delta Lake, dbt, and Superset project for real-time commerce analytics."
+    />
+    <link rel="stylesheet" href="docs/site.css" />
+  </head>
+  <body>
+    <header class="topbar" aria-label="Project navigation">
+      <a class="brand" href="#top" aria-label="Real-Time E-commerce Data Pipeline home">
+        <span class="brand-mark">BB</span>
+        <span>Real-Time E-commerce Data Pipeline</span>
+      </a>
+      <nav class="nav-links" aria-label="Sections">
+        <a href="#architecture">Architecture</a>
+        <a href="#quality">Data Quality</a>
+        <a href="#models">dbt Models</a>
+        <a href="#run">Run</a>
+        <a href="https://github.com/Mohan143-web/bestbuy-data-platform">GitHub</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero section">
+        <div class="hero-copy">
+          <p class="eyebrow">Kafka + Spark + Delta Lake + dbt</p>
+          <h1>Real-Time E-commerce Data Pipeline</h1>
+          <p class="lede">
+            A portfolio-ready streaming data platform that simulates how a retailer processes
+            orders, inventory updates, pricing changes, and user activity into analytics-ready
+            lakehouse tables and dashboards.
+          </p>
+          <div class="actions" aria-label="Primary links">
+            <a class="button primary" href="https://github.com/Mohan143-web/bestbuy-data-platform">
+              View Repository
+            </a>
+            <a class="button secondary" href="#run">Run Locally</a>
+          </div>
+        </div>
+        <div class="hero-visual" aria-label="Dashboard preview">
+          <img src="dashboards/assets/dashboard-preview.svg" alt="Dashboard preview" />
+        </div>
+      </section>
+
+      <section class="metrics section" aria-label="Project highlights">
+        <div>
+          <strong>4</strong>
+          <span>Kafka event topics</span>
+        </div>
+        <div>
+          <strong>3</strong>
+          <span>Lakehouse layers</span>
+        </div>
+        <div>
+          <strong>5</strong>
+          <span>Gold analytics tables</span>
+        </div>
+        <div>
+          <strong>4</strong>
+          <span>Validated local tests</span>
+        </div>
+      </section>
+
+      <section id="architecture" class="section split">
+        <div>
+          <p class="eyebrow">Architecture</p>
+          <h2>From events to business-ready tables</h2>
+          <p>
+            The system emits realistic commerce events, streams them through Kafka, parses and
+            validates them with Spark Structured Streaming, then stores raw, cleaned, quarantined,
+            and analytics-ready data in a Delta Lakehouse layout.
+          </p>
+        </div>
+        <ol class="pipeline-list" aria-label="Pipeline flow">
+          <li><span>1</span>Data Generator produces orders, inventory, pricing, and clickstream data.</li>
+          <li><span>2</span>Kafka stores each event family in a dedicated topic.</li>
+          <li><span>3</span>Spark applies schema parsing, enrichment, watermarks, and deduplication.</li>
+          <li><span>4</span>Delta Lake separates Bronze, Silver, Quarantine, and Gold outputs.</li>
+          <li><span>5</span>dbt models expose warehouse and dashboard-ready tables.</li>
+        </ol>
+      </section>
+
+      <section id="quality" class="section band">
+        <p class="eyebrow">Data Quality</p>
+        <h2>Built around the checks hiring teams look for</h2>
+        <div class="quality-grid">
+          <article>
+            <h3>Schema Contracts</h3>
+            <p>Every event topic has required fields, expected types, and event-time rules.</p>
+          </article>
+          <article>
+            <h3>Deduplication</h3>
+            <p>Topic-specific natural keys remove repeat order, inventory, pricing, and click events.</p>
+          </article>
+          <article>
+            <h3>Late Data Handling</h3>
+            <p>Watermarks and lateness flags keep event-time analytics honest.</p>
+          </article>
+          <article>
+            <h3>Quarantine</h3>
+            <p>Invalid records are retained for investigation instead of silently disappearing.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="models" class="section split reverse">
+        <div>
+          <p class="eyebrow">Analytics</p>
+          <h2>Gold tables for revenue and inventory decisions</h2>
+          <p>
+            dbt turns cleaned Silver data into readable business models such as daily revenue,
+            top products, order facts, and inventory risk. The models include tests for nulls,
+            accepted values, and non-negative metrics.
+          </p>
+        </div>
+        <div class="table-list">
+          <div><code>orders_gold</code><span>Order-level fact table</span></div>
+          <div><code>revenue_daily</code><span>Revenue by date, category, and channel</span></div>
+          <div><code>top_products</code><span>Product leaderboard by revenue and units</span></div>
+          <div><code>inventory_risk</code><span>Stockout and reorder alerts</span></div>
+        </div>
+      </section>
+
+      <section id="run" class="section run-panel">
+        <div>
+          <p class="eyebrow">Run Locally</p>
+          <h2>Start the streaming stack</h2>
+        </div>
+        <pre><code>docker compose up -d zookeeper kafka kafka-ui kafka-init
+python3 kafka-producer/producer.py --bootstrap-server localhost:29092 --rate-per-second 5
+docker compose --profile stream up generator streaming-job</code></pre>
+        <p>
+          Kafka UI runs on <code>localhost:8080</code>. The README includes local Spark, dbt, and
+          health-check commands.
+        </p>
+      </section>
+    </main>
+
+    <footer>
+      <span>Built for real-time data engineering portfolio review.</span>
+      <a href="https://github.com/Mohan143-web/bestbuy-data-platform">Open on GitHub</a>
+    </footer>
+  </body>
+</html>
+
