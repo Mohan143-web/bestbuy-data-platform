@@ -1,0 +1,21 @@
+name: bestbuy_data_platform
+version: 1.0.0
+config-version: 2
+
+profile: bestbuy_data_platform
+
+model-paths: ["models"]
+seed-paths: ["seeds"]
+macro-paths: ["macros"]
+
+models:
+  bestbuy_data_platform:
+    silver:
+      +materialized: view
+    gold:
+      +materialized: table
+
+seeds:
+  bestbuy_data_platform:
+    +quote_columns: false
+

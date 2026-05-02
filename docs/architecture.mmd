@@ -1,0 +1,18 @@
+flowchart LR
+    generator["Data Generator<br/>orders, inventory, pricing, clickstream"]
+    kafka["Kafka Topics<br/>orders | inventory | pricing | clickstream"]
+    spark["Spark Structured Streaming<br/>validation, dedupe, enrichment"]
+    bronze["Delta Bronze<br/>raw payloads"]
+    silver["Delta Silver<br/>clean typed records"]
+    quarantine["Delta Quarantine<br/>invalid records"]
+    gold["Delta Gold<br/>orders_gold, revenue_daily, inventory_risk"]
+    dbt["dbt<br/>warehouse transformations + tests"]
+    warehouse["Snowflake / Redshift<br/>analytics schema"]
+    dashboard["Superset / Power BI<br/>revenue + inventory dashboard"]
+
+    generator --> kafka --> spark
+    spark --> bronze
+    spark --> silver
+    spark --> quarantine
+    silver --> gold --> dbt --> warehouse --> dashboard
+

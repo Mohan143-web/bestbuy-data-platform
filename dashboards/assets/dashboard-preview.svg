@@ -1,0 +1,67 @@
+<svg width="1280" height="760" viewBox="0 0 1280 760" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Superset dashboard preview for real-time commerce operations">
+  <rect width="1280" height="760" fill="#F5F7FA"/>
+  <rect x="0" y="0" width="1280" height="72" fill="#0B1F3A"/>
+  <text x="32" y="45" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#FFFFFF">Best Buy Real-Time Commerce Operations</text>
+  <text x="1060" y="43" font-family="Arial, sans-serif" font-size="14" fill="#B7C5D8">Kafka • Spark • Delta • dbt</text>
+
+  <rect x="32" y="100" width="280" height="120" rx="8" fill="#FFFFFF" stroke="#D7DEE8"/>
+  <text x="56" y="132" font-family="Arial, sans-serif" font-size="14" fill="#5C6B7A">Orders Today</text>
+  <text x="56" y="180" font-family="Arial, sans-serif" font-size="42" font-weight="700" fill="#0B1F3A">18,420</text>
+  <text x="224" y="181" font-family="Arial, sans-serif" font-size="16" fill="#18864B">+12.8%</text>
+
+  <rect x="336" y="100" width="280" height="120" rx="8" fill="#FFFFFF" stroke="#D7DEE8"/>
+  <text x="360" y="132" font-family="Arial, sans-serif" font-size="14" fill="#5C6B7A">Revenue</text>
+  <text x="360" y="180" font-family="Arial, sans-serif" font-size="42" font-weight="700" fill="#0B1F3A">$4.8M</text>
+  <text x="520" y="181" font-family="Arial, sans-serif" font-size="16" fill="#18864B">+9.4%</text>
+
+  <rect x="640" y="100" width="280" height="120" rx="8" fill="#FFFFFF" stroke="#D7DEE8"/>
+  <text x="664" y="132" font-family="Arial, sans-serif" font-size="14" fill="#5C6B7A">Low Inventory SKUs</text>
+  <text x="664" y="180" font-family="Arial, sans-serif" font-size="42" font-weight="700" fill="#B42318">37</text>
+  <text x="730" y="181" font-family="Arial, sans-serif" font-size="16" fill="#B42318">needs action</text>
+
+  <rect x="944" y="100" width="304" height="120" rx="8" fill="#FFFFFF" stroke="#D7DEE8"/>
+  <text x="968" y="132" font-family="Arial, sans-serif" font-size="14" fill="#5C6B7A">Pipeline Health</text>
+  <circle cx="986" cy="168" r="9" fill="#18864B"/>
+  <text x="1004" y="174" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#0B1F3A">Streaming</text>
+  <text x="1004" y="196" font-family="Arial, sans-serif" font-size="13" fill="#5C6B7A">Latest checkpoint: 11 sec ago</text>
+
+  <rect x="32" y="252" width="760" height="308" rx="8" fill="#FFFFFF" stroke="#D7DEE8"/>
+  <text x="56" y="288" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#0B1F3A">Revenue Trend by Category</text>
+  <line x1="72" y1="508" x2="748" y2="508" stroke="#C8D2DF"/>
+  <line x1="72" y1="332" x2="72" y2="508" stroke="#C8D2DF"/>
+  <polyline points="82,486 160,456 238,468 316,400 394,378 472,342 550,360 628,310 736,284" fill="none" stroke="#1D63ED" stroke-width="4"/>
+  <polyline points="82,496 160,476 238,430 316,448 394,392 472,404 550,370 628,348 736,320" fill="none" stroke="#F2C94C" stroke-width="4"/>
+  <polyline points="82,502 160,492 238,470 316,472 394,430 472,420 550,398 628,390 736,356" fill="none" stroke="#2F9E44" stroke-width="4"/>
+  <text x="78" y="532" font-family="Arial, sans-serif" font-size="12" fill="#5C6B7A">09:00</text>
+  <text x="354" y="532" font-family="Arial, sans-serif" font-size="12" fill="#5C6B7A">12:00</text>
+  <text x="704" y="532" font-family="Arial, sans-serif" font-size="12" fill="#5C6B7A">15:00</text>
+
+  <rect x="824" y="252" width="424" height="308" rx="8" fill="#FFFFFF" stroke="#D7DEE8"/>
+  <text x="848" y="288" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#0B1F3A">Low Inventory Alerts</text>
+  <rect x="848" y="318" width="376" height="40" rx="4" fill="#F0F4F8"/>
+  <text x="864" y="343" font-family="Arial, sans-serif" font-size="13" font-weight="700" fill="#344054">SKU</text>
+  <text x="1012" y="343" font-family="Arial, sans-serif" font-size="13" font-weight="700" fill="#344054">Store</text>
+  <text x="1116" y="343" font-family="Arial, sans-serif" font-size="13" font-weight="700" fill="#344054">Risk</text>
+  <text x="864" y="390" font-family="Arial, sans-serif" font-size="14" fill="#0B1F3A">BB-CAM-MIR</text>
+  <text x="1012" y="390" font-family="Arial, sans-serif" font-size="14" fill="#0B1F3A">SFO-001</text>
+  <rect x="1116" y="370" width="76" height="28" rx="14" fill="#FEE4E2"/>
+  <text x="1132" y="389" font-family="Arial, sans-serif" font-size="12" font-weight="700" fill="#B42318">stockout</text>
+  <text x="864" y="438" font-family="Arial, sans-serif" font-size="14" fill="#0B1F3A">BB-TV-55-OLED</text>
+  <text x="1012" y="438" font-family="Arial, sans-serif" font-size="14" fill="#0B1F3A">ATL-005</text>
+  <rect x="1116" y="418" width="76" height="28" rx="14" fill="#FFF3CD"/>
+  <text x="1134" y="437" font-family="Arial, sans-serif" font-size="12" font-weight="700" fill="#8A5A00">reorder</text>
+  <text x="864" y="486" font-family="Arial, sans-serif" font-size="14" fill="#0B1F3A">BB-LAP-ULTRA</text>
+  <text x="1012" y="486" font-family="Arial, sans-serif" font-size="14" fill="#0B1F3A">SEA-002</text>
+  <rect x="1116" y="466" width="76" height="28" rx="14" fill="#FFF3CD"/>
+  <text x="1134" y="485" font-family="Arial, sans-serif" font-size="12" font-weight="700" fill="#8A5A00">reorder</text>
+
+  <rect x="32" y="592" width="1216" height="124" rx="8" fill="#FFFFFF" stroke="#D7DEE8"/>
+  <text x="56" y="628" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#0B1F3A">Top Products</text>
+  <rect x="56" y="650" width="1136" height="12" rx="6" fill="#EEF2F6"/>
+  <rect x="56" y="650" width="880" height="12" rx="6" fill="#1D63ED"/>
+  <rect x="56" y="674" width="1136" height="12" rx="6" fill="#EEF2F6"/>
+  <rect x="56" y="674" width="690" height="12" rx="6" fill="#F2C94C"/>
+  <rect x="56" y="698" width="1136" height="12" rx="6" fill="#EEF2F6"/>
+  <rect x="56" y="698" width="520" height="12" rx="6" fill="#2F9E44"/>
+</svg>
+

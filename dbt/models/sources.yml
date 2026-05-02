@@ -1,0 +1,11 @@
+version: 2
+
+sources:
+  - name: lakehouse
+    description: Gold and Silver tables loaded from Delta Lake into the analytics warehouse.
+    tables:
+      - name: orders_silver
+        description: Cleaned order events emitted by Spark Structured Streaming.
+      - name: inventory_silver
+        description: Cleaned inventory updates emitted by Spark Structured Streaming.
+

@@ -1,0 +1,42 @@
+version: 2
+
+models:
+  - name: orders_gold
+    description: Order-level business fact table for analytics.
+    columns:
+      - name: order_id
+        tests:
+          - not_null
+      - name: order_total
+        tests:
+          - not_null
+          - non_negative
+
+  - name: revenue_daily
+    description: Daily revenue by category and channel.
+    columns:
+      - name: order_date
+        tests:
+          - not_null
+      - name: revenue
+        tests:
+          - non_negative
+
+  - name: top_products
+    description: Product leaderboard by sales and revenue.
+    columns:
+      - name: product_id
+        tests:
+          - not_null
+      - name: revenue
+        tests:
+          - non_negative
+
+  - name: inventory_risk
+    description: Latest store-product inventory state with stockout/reorder risk.
+    columns:
+      - name: inventory_risk_level
+        tests:
+          - accepted_values:
+              values: ['stockout', 'reorder', 'healthy']
+

@@ -1,0 +1,9 @@
+product_id,sku,product_name,category,brand,base_price,cost,reorder_point
+P1001,BB-TV-55-OLED,55 inch OLED 4K TV,Home Theater,Sony,1399.99,950.00,8
+P1002,BB-LAP-ULTRA,UltraLight 14 Laptop,Computers,Lenovo,1199.99,820.00,12
+P1003,BB-HDP-NC700,Noise Canceling Headphones,Audio,Bose,349.99,210.00,20
+P1004,BB-PHN-XR,Smartphone XR 256GB,Mobile,Apple,999.99,710.00,18
+P1005,BB-GME-CON,NextGen Game Console,Gaming,Microsoft,499.99,375.00,15
+P1006,BB-CAM-MIR,Mirrorless Camera Kit,Cameras,Canon,899.99,620.00,6
+P1007,BB-WFH-CAM,4K Webcam,Computers,Logitech,179.99,95.00,25
+P1008,BB-APP-FRY,Smart Air Fryer,Appliances,Ninja,149.99,82.00,30

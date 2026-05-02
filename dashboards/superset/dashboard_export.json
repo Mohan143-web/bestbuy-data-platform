@@ -1,0 +1,40 @@
+{
+  "dashboard_title": "Best Buy Real-Time Commerce Operations",
+  "description": "Executive operations dashboard powered by Kafka, Spark Structured Streaming, Delta Lake, and dbt gold models.",
+  "datasources": [
+    "orders_gold",
+    "revenue_daily",
+    "top_products",
+    "inventory_risk"
+  ],
+  "charts": [
+    {
+      "title": "Revenue Trend",
+      "dataset": "revenue_daily",
+      "viz_type": "line",
+      "metrics": ["revenue", "gross_margin"],
+      "time_column": "order_date",
+      "group_by": ["category"]
+    },
+    {
+      "title": "Orders by Channel",
+      "dataset": "orders_gold",
+      "viz_type": "bar",
+      "metrics": ["count_distinct(order_id)"],
+      "group_by": ["channel"]
+    },
+    {
+      "title": "Top Products",
+      "dataset": "top_products",
+      "viz_type": "table",
+      "columns": ["product_name", "category", "units_sold", "revenue"]
+    },
+    {
+      "title": "Low Inventory Alerts",
+      "dataset": "inventory_risk",
+      "viz_type": "table",
+      "columns": ["product_id", "store_id", "available_to_promise", "reorder_point", "inventory_risk_level"]
+    }
+  ]
+}
+
